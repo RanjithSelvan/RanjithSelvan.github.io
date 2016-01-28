@@ -1,0 +1,53 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+}
+body
+{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:96px;
+    color:#262626;
+    text-align:center;
+    background-color:#464646;
+}
+
+.BodyContainer
+{
+    background-color:#3A8CFF;
+    height: 100%;
+    margin: 0% 5% 0% 5%;
+}
+
+.Cap
+{
+    background-color:#FFFFFF;
+    height: 24px;
+}
+
+#Title
+{
+    padding-top: 2.5%;
+}
+#NavBar
+{
+    margin-top: 2.5%;
+    font-size: 24px;
+    background-color:white;
+}
+#Menu li
+{
+    margin: 4px 5% 4px 5%;
+    list-style-type:none;
+    display: inline-block;
+    border-right:double;
+    border-left: double;
+    border-color:#c8c8c8;
+}
+a{
+    text-decoration:none;
+    color: #C8C8C8;
+}
+a:hover{
+    color: #333333;
+}
