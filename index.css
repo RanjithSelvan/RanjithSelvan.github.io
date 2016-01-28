@@ -10,30 +10,50 @@ body
     color:#262626;
     text-align:center;
     background-color:#464646;
+    background-image:url("Background2.png");
+    background-repeat:repeat;
+    
 }
 
 .BodyContainer
 {
     background-color:#3A8CFF;
+    background-image:url("Background.png");
+    background-repeat:repeat;
     height: 100%;
-    margin: 0% 5% 0% 5%;
+    margin: 8px 5% 0% 5%;
 }
 
 .Cap
 {
     background-color:#FFFFFF;
     height: 24px;
+    box-shadow: 0px 2px 5px black, 0px -2px 5px black ;
 }
-
+.Post
+{
+    font-size:20px;
+    color: white;
+    text-align:left;
+    margin: 2% 5% 8px 5%;
+    padding: 16px;
+    background-color: #484848;
+    background-image:url("Background2.png");
+    background-repeat:repeat;
+    box-shadow: 0px 0px 10px black;
+}
 #Title
 {
     padding-top: 2.5%;
+    padding-left: 10%;
+    text-align: left;
 }
 #NavBar
 {
     margin-top: 2.5%;
     font-size: 24px;
     background-color:white;
+    box-shadow: 0px 0px 10px black;
 }
 #Menu li
 {
@@ -50,4 +70,36 @@ a{
 }
 a:hover{
     color: #333333;
+}
+#activeTab a
+{
+    color: #333333;
+}
+#MainBody
+{
+    margin: 8px 5% 8px 5%;
+    padding: 8px 5% 2.5% 5%;
+}
+#PostHeader
+{
+    border-bottom: double;
+}
+#PostTitle
+{
+    font-size: 48px;
+}
+#PostDate
+{
+    font-size: 16px;
+    font-style: italic;
+}
+#SubPost #PostHeader #PostTitle
+{
+    font-size:32px;
+}
+#CapBot
+{
+    position: fixed;
+    bottom: 0px; 
+    width: 100%; 
 }
