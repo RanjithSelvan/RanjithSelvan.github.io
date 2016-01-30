@@ -42,6 +42,7 @@ body
     background-repeat:repeat;
     box-shadow: 0px 0px 10px black;
 }
+
 #Title
 {
     padding-top: 2.5%;
@@ -96,6 +97,17 @@ a:hover{
 #SubPost #PostHeader #PostTitle
 {
     font-size:32px;
+}
+#Content ul
+{
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#Content ul li
+{
+    margin-top: 8px;
+}
 }
 #CapBot
 {

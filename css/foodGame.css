@@ -1,0 +1,51 @@
+﻿body {
+    background-color:#808080;
+}
+
+#Game_Container {
+    width: 640px;
+    height: 480px;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#Debugging {
+    position:absolute;
+    z-index:5;
+    border-style:none;
+    top: 0;
+    left: 0;
+}
+
+#Menu_C {
+    position:absolute;
+    z-index:4;
+    border-style:none;
+    top: 0;
+    left: 0;
+}
+
+#Moving_Object_C {
+    position:absolute;
+    z-index:3;
+    border-style:none;
+    top: 0;
+    left: 0;
+}
+
+#Static_Object_C {
+    position:absolute;
+    z-index:2;
+    border-style:none;
+    top: 0;
+    left: 0;
+}
+
+#Background_C {
+    position:absolute;
+    z-index:0;
+    border-style:none;
+    top: 0;
+    left: 0;
+}
