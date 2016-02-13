@@ -1,78 +1,19 @@
-<!DOCTYPE HTML>
-<html5>
-<head>
-    <title>
-        Ranjith Selvan
-    </title>
-    <link type="text/css" rel="stylesheet" href="./index.css" />    
-</head>
-<BODY>
-    <div id="CapTop" class="Cap">
+---
+layout: default
+title: Home
+---
 
-    </div><!--CapTop End-->
-    <div id="TopBody" class="BodyContainer">
-       <div id="MainHeader">
-           <div id="Title">Ranjith Selvan</div>
-
-           <div id="NavBar">
-               <ul id="Menu">
-
-                   <li id="activeTab"><a href="./index.html">Home</a></li>
-                   <li><a href="./aboutme.html">About Me</a></li>
-                   <li><a href="./projects.html">Projects</a></li>
-                   <li><a href="./contact.html">Contact</a></li>
-               </ul>
-           </div>
-       </div>
-    </div> <!--TopBar End-->
-    <div id="MainBody" class="BodyContainer">
-        <div id="MainPost" class="Post">
-            <div id="PostHeader">
-                <p id="PostTitle">Updated Projects on GitHub</p>
-                <p id="PostDate">Feb 4 2016</p>
-            </div>
-            
-            <div id="Content">
-                <p>
-                    <br />
-                    I've updated 'Sudoku' and 'Timing-App' recently as I found myself with free time and taking a break from the big Unity project. Unity project is progressing, UI is getting close to completion. Completion is the layout and functionality. Graphics and sound effects are still needed but will be done at polish stage.
-                </p>
-            </div>
-        </div> <!--MainPost End-->
-        <div id="SubPost" class="Post">
-            <div id="PostHeader">
-                <p id="PostTitle">Updated Projects Page</p>
-                <p id="PostDate">Jan 29 2016</p>
-            </div>
-            <div id="Content">
-                <p>
-                    <br />
-                    I've added posts explaining some of the programming projects I've done. Most are unfinished if only because they were experiments in specific tasks. For example, I've started so many projects dealing with interacting circles in JavaScript it was silly to look through my file system and see so many. But they all taught me valuable programming lessons and techniques. I've also added links to two of my more completed projects, the Timing App, and Ant Hill.
-                </p>
-            </div>
-        </div><!--SubPost End-->
-        <div id="SubPost" class="Post">
-            <div id="PostHeader">
-                <p id="PostTitle">Website Launch</p>
-                <p id="PostDate">Jan 27 2016</p>
-            </div>
-            <div id="Content">
-                <p>
-                    <br />
-                    I've always wanted a website of my own to publish my personal projects and thoughts, and here is iteration one. Having recently (Dec 2015) graduated with a CS degree and in the process of looking for jobs, I needed a site I could link to and show some of my works. This is that site. NEW LAUNCH!
-                </p>
-                <p>
-                    <br />
-                    While looking into solutions, I did notice Jekyll as a way to control static pages for Github Pages, but that is going to take some time to look into. In the mean time, I've put up a basic site that I can update manually. That said this website is going to need more graphics to make it pop but I do like the look so far. Not bad for an afternoon of work.
-                </p>
-            </div>
-        </div><!--SubPost End-->
-    </div> <!--MainBody End-->
-    <div id="BottomBody" class="BodyContainer">
-
-    </div><!--BottomBody End-->
-    <div id="CapBot" class="Cap">
-
-    </div><!--CapBot End-->
-</BODY>
-</html5>
+<div class="Home">
+    <ul class="post-list">
+        {% for post in site.posts %}
+            {% if post.categories contains 'blogs' %}
+                <li>
+                    <p><a class="post-link" href="{{ post.url | prepend: site.baseurl}}">{{post.title}}</a></p>
+                    <p class="post-meta">{{post.date | date: "%b %-d, %Y"}}</p>
+                    <p class="post-excerpt" >{{post.excerpt | remove: '<p>' | remove: '</p>'}}...</p>
+                </li>
+                <br />
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,125 @@
+﻿*
+{
+    margin: 0;
+    padding: 0;
+    text-decoration:none;
+}
+body
+{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:2em;
+    color:#262626;
+    text-align:center;
+    background-color:#464646;
+}
+h2{
+    margin-bottom: 0.5em;
+}
+h3{
+    text-decoration: underline;
+}
+
+/*Heeader*/
+#Cap{
+    height:1em;
+    background-color:#FFFFFF;
+    box-shadow: 0px 2px 5px black, 0px -2px 5px black;
+}
+#Title{
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    font-size: 3em;
+    color: #FFFFFF;
+    background-image: url();
+}
+
+#nav{
+    margin: 0;
+    padding: 0.5em 0 0.5em 0;
+    font-size: 0.5em;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0.5em #000000;
+}
+#nav a{
+    color: #494949;
+    margin: 0 2em 0 2em;
+    padding: 0 0.05em 0 0.05em;
+    border-left: double;
+    border-right: double;
+}
+#nav a:hover{
+    color: #000000;
+    background-color: #E2E2E2;
+}
+
+/*Footer*/
+footer{
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    font-size: 0.5em;
+    background-color: #FFFFFF;
+    box-shadow: 0px 2px 5px black, 0px -2px 5px black;
+}
+footer *{
+    text-decoration:none;
+    color: #103045;
+    display:inline-block;
+}
+
+/*Body*/
+.container{
+    width:80%;
+    margin: 0.5em 0 0.5em 10%;
+    padding: 0.05em 0 0.05em 0;
+    background-color:#3A8CFF;
+}
+ul{
+    list-style-type:none;
+}
+.post-meta{
+    font-size: 0.65em;
+    margin-bottom: 0.2em;
+    border-bottom: double;
+}
+
+.post-link{
+    color:aqua;
+    border-left: double;
+    border-right: double;
+    padding: 0 4px 0 4px;
+}
+.post-excerpt{
+    font-size: 0.5em;
+}
+
+/*Post*/
+.post{
+    width:80%;
+    margin: 0.5em 10% 0.5em 10%;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+    background-color: #464646;
+    font-size: 1em;
+    text-align: left;
+    color: #FFFFFF;
+    box-shadow: 0 0 0.5em #000000;
+}
+
+.post-header{
+    border-bottom: double;
+    margin-bottom: 0.5em;
+}
+
+.post-title{
+    font-size: 1.5em;
+}
+
+.meta{
+    font-size: 0.65em;
+}
+
+.post-content{
+    font-size: 0.5em;
+}
+
+.post ul ul{
+    margin-left:1em;
+    list-style:circle;
+}

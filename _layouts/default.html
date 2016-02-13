@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Ranjith Selvan
+    </title>
+    <link type="text/css" rel="stylesheet" href="{{ "/css/index.css" | prepend: site.baseurl }}" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div id="Cap"></div>
+        <div class="container">
+            <div id="Title">Ranjith Selvan</div>
+
+            <div id="nav">
+                <a href="{{ "/index.html" | prepend: site.baseurl }}">Home</a>
+                <a href="{{ "/about/index.html" | prepend: site.baseurl }}">About Me</a>
+                <a href="{{ "/projects/index.html" | prepend: site.baseurl }}">Projects</a>
+                <a href="{{ "/contact/index.html" | prepend: site.baseurl }}">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post">
+            <h2>{{page.title}}</h2>
+            {{ content }}
+        </div>
+    </div><!-- /.container -->
+
+    <footer>
+        <ul>
+            <li><a href="https://github.com/ranjithselvan">github.com/ranjithselvan</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

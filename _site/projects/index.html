@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Ranjith Selvan
+    </title>
+    <link type="text/css" rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div id="Cap"></div>
+        <div class="container">
+            <div id="Title">Ranjith Selvan</div>
+
+            <div id="nav">
+                <a href="/index.html">Home</a>
+                <a href="/about/index.html">About Me</a>
+                <a href="/projects/index.html">Projects</a>
+                <a href="/contact/index.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post">
+            <h2>Projects</h2>
+            <div class="Home">
+    <ul class="post-list">
+        
+        
+        <li>
+            <p><a class="post-link" href="/projects/2016/02/11/First-Project-Post.html">Jekyll Website</a></p>
+            <p class="post-meta">Feb 11, 2016</p>
+            <div class="post-content">
+                <p>I’ve migrated to <a href="http://jekyllrb.com">Jekyll</a> sucessfully and it is pretty fantastic! I want to add a side bar to this site eventually. I also am running throught the idea of making a different page for each project and then post categories for each for them, but this may or may not happen. I might do it if I determine I will make posts are new projects I am working on and will be some what active for more than two posts. If that happens I will need to add more functionality to the website.</p>
+
+<p><br />
+I was tempted to go out and get a Jekyll template and just use it since this was just a profile website but decided against it. I have time since I am currently looking for a job and add Jekyll to my resume is not a bad thing to be able to do. I am glad I learned it. It is similar to a system I used with MongoDB before so it was not too unfamilar to me.</p>
+
+<p><br />
+Over all happy with the turn out. I will need to so some polish and things but we will see.</p>
+
+            </div>
+        </li>
+        <br />
+        
+        
+        
+        
+        
+        
+        
+        <li>
+            <p><a class="post-link" href="/projects/2016/01/29/Timing-App.html">Timing App</a></p>
+            <p class="post-meta">Jan 29, 2016</p>
+            <div class="post-content">
+                <p>When playing games in full screen, your clock on the bottom right hand corner(on windows) is hidden. I needed to be able to tell time. I have a multi monitor setup and so I could put a clock on one of the other screens. I figured that it would be interesting to not only to keep have the current time on the screen but maybe how long I’ve been gaming, or give myself a count down for how long I can game. To satisfy this need I created an app which through google I could not find.</p>
+
+<p><br />
+It is simply a set of hidden div’s that are toggled by buttons and the div’s contain the elements needed to operate each of the functions, stopwatch, countdown, and alarm. Into making the system, I didn’t finish countdown because it felt a little redundant with alarm since the under laying math was only set up for a 24hr system, so the vestigial button remains There are also bugs in Alarm, such as not looping back around the 0:00. Again this is purely a, “From this current time on I want to time blank.”</p>
+
+            </div>
+        </li>
+        <br />
+        
+        
+        
+        <li>
+            <p><a class="post-link" href="/projects/2016/01/29/Sudoku.html">Sudoku</a></p>
+            <p class="post-meta">Jan 29, 2016</p>
+            <div class="post-content">
+                <p>This was a project I started in my first year as an undergrad. At its current status it is an infinite loop that can solve simple boards that only require 1st logic. Of course since it is an infinite loop you do need to be in the debugger to see that it does solve them. The puzzle that I’ve included in my github is a puzzle that requires 3rd level logic, so it doesn’t actually solve the one I have there now. This program only solves puzzles with unique solutions. It would be another function to check for that but it wasn’t part of the original program.</p>
+
+<p><br />
+The program flow is as follows</p>
+
+<ul>
+  <li>Read a board from a file. When starting this project I wanted to eventually create a UI using the Windows window API. Interjecting a thought here, while learning OpenGL, I found that the windows API is scary to say the least and that project was saved by GLUT. If I come back to finishing this project windows API is the final boss to tackle.</li>
+  <li>After reading the board, I populate three data structures of references, so that traversing the board was made simpler. Now rows, and cols may have been a little redundant but, It allows for using the same functions and loops on these arrays.</li>
+  <li>Once everything is properly populated, I execute a simplify() function which is the 0th level of logic. Simply go to each tile and determine if there is only one possible value it could be. If that is the case make it that number, and remove that from its neighbors( tiles in the row, col and square that it is a part of).</li>
+  <li>Next solve the 1St level of logic. This is to reduce the possibilities of a particular square using the existing elements in its row, column, or square. If a value exists within its neighbors, then remove it from the tile in focus. Do this for every tile, and simplify() again.</li>
+  <li>(The following is not implemented but is the logic for it.)</li>
+  <li>Next solve the 2nd level of logic. If there exists two tiles within a row or column such that they are the only two to contain the possibility of a particular value, that is none of the other seven tiles have the possibility of being that value, then if these two titles are in the same square, the remaining tiles of the square can not be that value.</li>
+  <li>At this point we enter a AI situation, is it better to execute 0th and 1st again or do we enter the 3rd level. Here I do have the idea that we can introduce a dirty bit, much like in file system, were we set a global variable, hey we did some reducing. If this happens restart from 0th level makes sense, since we could now possibly get another value. If we haven’t reduced any thing, then we need to move to 3rd.</li>
+  <li>3rd Level. Is the same as level two but for three tiles.</li>
+  <li>The program will loop until a solution is found.</li>
+</ul>
+
+            </div>
+        </li>
+        <br />
+        
+        
+        
+        <li>
+            <p><a class="post-link" href="/projects/2016/01/29/Ant-Hill.html">Ant Hill</a></p>
+            <p class="post-meta">Jan 29, 2016</p>
+            <div class="post-content">
+                <p>I created this game with a two other in my 2nd year of undergrad. The idea came from a project I did in the summer of 9th grade as part of UC Berkeley ATDP. That summer I took my first official programming class, though I had been doing light scripting in Game Maker before hand, this was exciting. Our large projects for the class were to create AI classes that would control an element on the screen and have it do something. The teacher had programmed the game itself but we created the AI. If you Google “Ranjith Selvan Pong” A Youtube video pop’s up of a AI match between me and a classmate.</p>
+
+<p><br />
+The other project we did in that class was a game where random pieces of food would show up on screen and we had to program an AI to get the largest score by times end. The catch was that your character would get slower as he had more food, and enemies could steal food from others by intersecting with them. Ant hill is my implementation of this game with an introduction of an “Ant hill where you can store food that can’t be stolen. Due to financial issues I had to leave the university and come back home and continue at a local university. As a result I never continued the project and has been left as is.</p>
+
+<p><br />
+It was a fun project because we decided to learn a new language, JavaScript, for it. My first introduction to a language that I really enjoy. It is very easy to prototype(JavaScript joke?) UI, and programs with JavaScript and better yet, deploy it across the web for everyone to use.</p>
+
+            </div>
+        </li>
+        <br />
+        
+        
+        
+        
+        
+        <li>
+            <p><a class="post-link" href="/projects/2016/01/27/City-Builder.html">City Builder Current Project, Not Offical Name</a></p>
+            <p class="post-meta">Jan 27, 2016</p>
+            <div class="post-content">
+                <p>My current project is a game using Unity Engine, in the C# language. This is to learn C# and possibly learn some cool stuff about game dev and if it works out an awesome game.</p>
+
+<p><br />
+I was watching Geek and Sundry’s TableTop show, and they played a table top tower defense game, unlike anything I’ve seen. It got me inspired to make something really cool and I got City Builder from it. It takes aspects of Civilization, class RPGs, and tower defense into something I think is going to be really fun if I finish realizing it.</p>
+
+<p><br />
+The player controls cities that can spawn units which must be attached to squads. All actions are taken by squads, even if that squad only has one member. Squads can be assigned to locations to attack, defend, or scout. A player needs to control resources to grow the city and possibly even create new ones, and create a kingdom. But there are other cities with their eyes set on the same resources and this will lead to conflict. This is the primary game loop I’ve planned.</p>
+
+<p><br />
+It sounds fun in my head, because there are so many different ways to approach the game. Do you control resources and starve other cities into nothingness? Do you take control of the cities themselves? What about alliances and multi front wars?</p>
+
+<p><br />
+I’m following a Model, View, Controller, paradigm. I’ve finished the basic data model, and the beginnings of the view, and controllers. Camera has been implement in a very rough state, translation and rotation.</p>
+
+<p><br />
+My current work is in the UI interface of the system, because that is where the player will be occupied largely. The Unity system is complex and is taking me some time to learn all that is needed to implement a basic UI. Once this is complete, a rough game can be played and, at this point I will be able to see if my idea is actually fun or not. Being so close that stage I’m very excited to see how the game will play.</p>
+
+            </div>
+        </li>
+        <br />
+        
+        
+        
+        
+    </ul>
+</div>
+        </div>
+    </div><!-- /.container -->
+
+    <footer>
+        <ul>
+            <li><a href="https://github.com/ranjithselvan">github.com/ranjithselvan</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

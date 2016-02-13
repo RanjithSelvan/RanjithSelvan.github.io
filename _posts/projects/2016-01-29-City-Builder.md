@@ -1,0 +1,23 @@
+---
+layout: post
+title: "City Builder Current Project, Not Offical Name"
+date: 2016-01-27
+category: projects
+---
+
+My current project is a game using Unity Engine, in the C# language. This is to learn C# and possibly learn some cool stuff about game dev and if it works out an awesome game.
+
+<br/>
+I was watching Geek and Sundry's TableTop show, and they played a table top tower defense game, unlike anything I've seen. It got me inspired to make something really cool and I got City Builder from it. It takes aspects of Civilization, class RPGs, and tower defense into something I think is going to be really fun if I finish realizing it.
+
+<br/>
+The player controls cities that can spawn units which must be attached to squads. All actions are taken by squads, even if that squad only has one member. Squads can be assigned to locations to attack, defend, or scout. A player needs to control resources to grow the city and possibly even create new ones, and create a kingdom. But there are other cities with their eyes set on the same resources and this will lead to conflict. This is the primary game loop I've planned.
+
+<br/>
+It sounds fun in my head, because there are so many different ways to approach the game. Do you control resources and starve other cities into nothingness? Do you take control of the cities themselves? What about alliances and multi front wars?
+
+<br/>
+I'm following a Model, View, Controller, paradigm. I've finished the basic data model, and the beginnings of the view, and controllers. Camera has been implement in a very rough state, translation and rotation.
+
+<br/>
+My current work is in the UI interface of the system, because that is where the player will be occupied largely. The Unity system is complex and is taking me some time to learn all that is needed to implement a basic UI. Once this is complete, a rough game can be played and, at this point I will be able to see if my idea is actually fun or not. Being so close that stage I'm very excited to see how the game will play. 

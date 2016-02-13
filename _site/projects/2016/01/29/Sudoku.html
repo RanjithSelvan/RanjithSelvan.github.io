@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Ranjith Selvan
+    </title>
+    <link type="text/css" rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+
+    <header class="site-header">
+        <div id="Cap"></div>
+        <div class="container">
+            <div id="Title">Ranjith Selvan</div>
+
+            <div id="nav">
+                <a href="/index.html">Home</a>
+                <a href="/about/index.html">About Me</a>
+                <a href="/projects/index.html">Projects</a>
+                <a href="/contact/index.html">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="post">
+            <h2>Sudoku</h2>
+            <div class="post-header">
+    <p class="meta">29 Jan 2016</p>
+</div>
+<div class="post-content">
+    <p>This was a project I started in my first year as an undergrad. At its current status it is an infinite loop that can solve simple boards that only require 1st logic. Of course since it is an infinite loop you do need to be in the debugger to see that it does solve them. The puzzle that I’ve included in my github is a puzzle that requires 3rd level logic, so it doesn’t actually solve the one I have there now. This program only solves puzzles with unique solutions. It would be another function to check for that but it wasn’t part of the original program.</p>
+
+<p><br />
+The program flow is as follows</p>
+
+<ul>
+  <li>Read a board from a file. When starting this project I wanted to eventually create a UI using the Windows window API. Interjecting a thought here, while learning OpenGL, I found that the windows API is scary to say the least and that project was saved by GLUT. If I come back to finishing this project windows API is the final boss to tackle.</li>
+  <li>After reading the board, I populate three data structures of references, so that traversing the board was made simpler. Now rows, and cols may have been a little redundant but, It allows for using the same functions and loops on these arrays.</li>
+  <li>Once everything is properly populated, I execute a simplify() function which is the 0th level of logic. Simply go to each tile and determine if there is only one possible value it could be. If that is the case make it that number, and remove that from its neighbors( tiles in the row, col and square that it is a part of).</li>
+  <li>Next solve the 1St level of logic. This is to reduce the possibilities of a particular square using the existing elements in its row, column, or square. If a value exists within its neighbors, then remove it from the tile in focus. Do this for every tile, and simplify() again.</li>
+  <li>(The following is not implemented but is the logic for it.)</li>
+  <li>Next solve the 2nd level of logic. If there exists two tiles within a row or column such that they are the only two to contain the possibility of a particular value, that is none of the other seven tiles have the possibility of being that value, then if these two titles are in the same square, the remaining tiles of the square can not be that value.</li>
+  <li>At this point we enter a AI situation, is it better to execute 0th and 1st again or do we enter the 3rd level. Here I do have the idea that we can introduce a dirty bit, much like in file system, were we set a global variable, hey we did some reducing. If this happens restart from 0th level makes sense, since we could now possibly get another value. If we haven’t reduced any thing, then we need to move to 3rd.</li>
+  <li>3rd Level. Is the same as level two but for three tiles.</li>
+  <li>The program will loop until a solution is found.</li>
+</ul>
+
+</div>
+        </div>
+    </div><!-- /.container -->
+
+    <footer>
+        <ul>
+            <li><a href="https://github.com/ranjithselvan">github.com/ranjithselvan</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
